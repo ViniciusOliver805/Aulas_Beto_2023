@@ -1,9 +1,16 @@
 .container {
   max-width: 1200px;
   min-height: 100px;
-  background: #eee;
+  background: linear-gradient(90deg, #cfd9df 0%, #e2ebf0 100%);
   padding: 30px;
   margin: 0 auto;
+}
+
+main {
+  width: 500px;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .posts {
@@ -11,23 +18,72 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
-
 .post {
-  background: #fff;
-  box-shadow: 0 1px 3px rgba (0, 0, 0.2);
-  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
   transition: transform 150ms ease-in-out;
-
 }
-
 .post:hover {
-  transform: scale(1.07)
+  transform: scale(1.05);
+  cursor: pointer;
 }
-
-.text{
-  padding: 10px;
-}
-
 .post img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   max-width: 100%;
+}
+.post h3, .post p {
+  padding: 0px 15px;
+}
+.post h3 {
+  text-transform: capitalize;
+  color: #222;
+}
+
+.btn-area {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+.btn:hover {
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+  background-color: #212529;
+}
+.btn:active {
+  background-color: #000 !important;
+}
+.btn-lg {
+  width: 170px;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+}
+.album {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  transition: transform 150ms ease-in-out;
+}
+.album:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.album img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  max-width: 100%;
+}
+.album h4 {
+  padding: 5px 15px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  color: #222;
+}
+
+.carousel-caption p {
+  text-transform: capitalize;
 }
